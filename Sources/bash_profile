@@ -1,0 +1,16 @@
+# ~/.profile: executed by Bourne-compatible login shells.
+
+if [ "$BASH" ]; then
+  if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+  fi
+fi
+
+if [ "$(tty)" = "/dev/tty1" ] ; then
+	echo none > /sys/class/leds/blue\:heartbeat/trigger
+	/usr/local/bin/battery.sh &
+	/usr/local/bin/gpio_joypad &
+	startx -- -nocursor 2>&1 &
+fi
+
+mesg n

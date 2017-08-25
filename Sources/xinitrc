@@ -1,0 +1,10 @@
+# a WM is needed some software are correctly sized in full screen
+# e.g : emulationstation, rvgl
+evilwm & pid=$!
+
+/usr/local/emulationstation.sh &
+
+# this allows not to shutdown X when emulation is killed
+# We want that because we have to kill it after gamelaunch
+# else it does not reappear on screen (SDL_Createwindow() does never end)
+wait $pid

@@ -1,0 +1,10 @@
+# system (mmc)
+UUID=e139ce78-9841-40fe-8823-96a304a09859	/	ext4	errors=remount-ro,noatime,discard	0	1
+/dev/mmcblk0p1 					/boot 	vfat	noatime,discard 			0 	2
+
+# sdcard
+/dev/mmcblk1p1 					/mnt/states 	   ext4	noatime,discard        		0 	1
+/dev/mmcblk1p2 					/mnt/ressources    ext4	noatime,discard		        0 	1
+
+# tmpfs
+tmpfs           /var/log        tmpfs   nodev,nosuid,noatime,size=20M      0       0
