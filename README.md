@@ -3,5 +3,5 @@ This repository hosts source files and some configuration files I used to build 
 
 More detail and how I built it on my blog : http://www.bluemind.org/gamodroid-c0-odroid-based-portable-retrogaming
 
-Sources should be places in /root/GameOdroid directory before launching install.sh
-
+The first version was based on debian (the content of source directory should be places in /root/GameOdroid directory before launching install.sh)
+Now, the console runs a custom build of retroarch, that you can found on my github : https://github.com/jit06/retroarch_fbdev_c1
